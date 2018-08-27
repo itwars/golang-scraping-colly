@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/itwars/scraping/meteo/providers/allosurf"
-	"github.com/itwars/scraping/meteo/providers/meteofrance"
-	"github.com/itwars/scraping/meteo/providers/surfforecast"
+	"github.com/itwars/golang-scraping-colly/meteo/providers/allosurf"
+	"github.com/itwars/golang-scraping-colly/meteo/providers/meteofrance"
+	"github.com/itwars/golang-scraping-colly/meteo/providers/surfforecast"
 )
 
 func main() {
