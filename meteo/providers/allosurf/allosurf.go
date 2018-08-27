@@ -47,6 +47,7 @@ func InfoMarine() {
 	c.OnResponse(func(r *colly.Response) {
 		infosMarines := &marine{}
 		json.Unmarshal(r.Body, infosMarines)
+		fmt.Println("Biscarrosse")
 		fmt.Println("Index UV              : ", infosMarines.Jour[0].Daily.UvsIndex)
 		fmt.Println("Coefficient matin     : ", infosMarines.Jour[0].Daily.CoeffAm)
 		fmt.Println("Coefficient après-midi: ", infosMarines.Jour[0].Daily.CoeffPm)

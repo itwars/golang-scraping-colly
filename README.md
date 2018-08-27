@@ -5,6 +5,7 @@ Différents exemples de web scraping en utilisant le framework Colly (Golang).
 ```
 - Le second exemple *meteo* fournit des prévisions et informations de différents sites météos et surf :
 ```
+Département Girondes
 Date du jour          :  Lundi 27 août
 Le soleil se lève à   :  07h18
 Le soleil se couche à :  20h49
@@ -12,6 +13,7 @@ Saint(e) du jour      :  Sainte Monique
 Tendance du temps     :  Éclaircies
 Température           :  15°C Minimale
 Température           :  28°C Maximale
+Biscarrosse
 Index UV              :  7
 Coefficient matin     :  81
 Coefficient après-midi:  88

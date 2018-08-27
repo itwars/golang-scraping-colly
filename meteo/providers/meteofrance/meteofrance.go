@@ -32,6 +32,7 @@ func Ephemeride() {
 	c.OnResponse(func(r *colly.Response) {
 		infosEphemeride := &ephemeride{}
 		json.Unmarshal(r.Body, infosEphemeride)
+		fmt.Println("Département Girondes    ")
 		fmt.Println("Date du jour          : ", infosEphemeride.Date)
 		fmt.Println("Le soleil se lève à   : ", infosEphemeride.LeveSoleil)
 		fmt.Println("Le soleil se couche à : ", infosEphemeride.CoucheSoleil)
