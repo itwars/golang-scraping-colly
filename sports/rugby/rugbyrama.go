@@ -28,9 +28,7 @@ func Top14() {
 	c.OnHTML("tr.standing-table__row", func(e *colly.HTMLElement) {
 		classement := &top14{}
 		e.Unmarshal(classement)
-		fmt.Println("Classement général : ", classement.Classement)
-		fmt.Println("Nom du club        : ", classement.Club)
-		fmt.Println("Nombre de points   : ", classement.NbPoints)
+		fmt.Printf("%2s %-25s %4s point(s)\n", classement.Classement, classement.Club, classement.NbPoints)
 	})
 	// En fin de scraping j'affiche le json avec toutes les informations récupérées
 	c.OnScraped(func(s *colly.Response) {
