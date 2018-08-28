@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	rugbyrama.Top14()
+	rugby.Top14()
 }
