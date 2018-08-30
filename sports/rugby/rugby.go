@@ -24,6 +24,9 @@ func Top14() {
 	})
 	c.OnRequest(func(r *colly.Request) {
 		// fmt.Println("Je visite le site suivant : ", r.URL.String())
+		fmt.Println()
+		fmt.Println("Classement rugby top 14")
+		fmt.Println()
 	})
 	c.OnHTML("tr.standing-table__row", func(e *colly.HTMLElement) {
 		classement := &top14{}
