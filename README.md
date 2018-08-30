@@ -25,3 +25,48 @@ Hauteur de houle      :  0.9 m
 Force du vent         :  5
 Direction du vent     :  SW
 ```
+
+- Le troisième exemple *sports* fournit les classements du rugby Top 14, foot Ligue 1 et golf :
+
+```
+Classement rugby top 14
+
+ 1 ASM Clermont                 5 point(s)
+ 2 Stade Français               5 point(s)
+ 3 Union Bordeaux-Bègles        5 point(s)
+ 4 Racing 92                    5 point(s)
+ 5 Stade Rochelais              4 point(s)
+ 6 Castres Olympique            4 point(s)
+ 7 Stade Toulousain             2 point(s)
+ 8 Lyon LOU                     2 point(s)
+ 9 Montpellier Hérault Rugby    1 point(s)
+10 Grenoble                     0 point(s)
+11 Rugby Club Toulonnais        0 point(s)
+12 Section Paloise              0 point(s)
+13 Perpignan                    0 point(s)
+14 SU Agen                      0 point(s)
+
+Classement foot ligue 1
+
+ 1 Paris-SG                     9 point(s)
+ 2 Dijon                        9 point(s)
+ 3 Lille                        7 point(s)
+ 4 Lyon                         6 point(s)
+ 5 Nîmes                        6 point(s)
+ 6 Reims                        6 point(s)
+ 7 Toulouse                     6 point(s)
+ 8 Saint-Etienne                5 point(s)
+ 9 Marseille                    4 point(s)
+10 Monaco                       4 point(s)
+11 Strasbourg                   4 point(s)
+12 Montpellier                  4 point(s)
+13 Rennes                       4 point(s)
+14 Amiens                       3 point(s)
+15 Bordeaux                     3 point(s)
+16 Caen                         2 point(s)
+17 Nantes                       1 point(s)
+18 Nice                         1 point(s)
+19 Angers                       0 point(s)
+20 Guingamp                     0 point(s)
+
+```
