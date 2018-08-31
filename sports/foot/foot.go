@@ -1,4 +1,4 @@
-// Package foot providing scrapping information from francefootball.fr
+// Package foot les informations depuis le site web francefootball.fr
 package foot
 
 import (
@@ -14,7 +14,7 @@ type ligue1 struct {
 	NbPoints string `selector:".table__col--pts"`
 }
 
-// Ligue1 func récupère les informations qui sont sous la forme d'un json
+// Ligue1 func récupère les informations
 func Ligue1() {
 	c := colly.NewCollector(
 		colly.AllowedDomains("www.francefootball.fr", "francefootball.fr"),

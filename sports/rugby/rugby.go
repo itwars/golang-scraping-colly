@@ -1,4 +1,4 @@
-// Package rugby providing scrapping information from rugbyrama.fr
+// Package rugby récupère les informations de rugbyrama.fr
 package rugby
 
 import (
@@ -14,7 +14,7 @@ type top14 struct {
 	NbPoints string `selector:".standing-table__cell-value--main"`
 }
 
-// Top14 func récupère les informations qui sont sous la forme d'un json
+// Top14 func récupère les informations de classement
 func Top14() {
 	c := colly.NewCollector(
 		colly.AllowedDomains("www.rugbyrama.fr", "rugbyrama.fr"),

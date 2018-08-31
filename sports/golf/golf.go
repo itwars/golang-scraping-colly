@@ -1,4 +1,4 @@
-// Package golf providing scrapping information from lefigaro
+// Package golf récupère les information sur le site du Figaro
 package golf
 
 import (
@@ -16,7 +16,7 @@ type leaderboard struct {
 	NbPoints string `selector:".td_idalgo_standing_points"`
 }
 
-// Leaderboard func récupère les informations qui sont sous la forme d'un json
+// Leaderboard func récupère les informations de classement
 func Leaderboard() {
 	c := colly.NewCollector(
 		colly.AllowedDomains("www.lefigaro.fr", "golf.lefigaro.fr"),
