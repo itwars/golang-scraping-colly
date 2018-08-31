@@ -42,7 +42,7 @@ func Forecast() {
 		var re = regexp.MustCompile(`(\d+)\s+(\w+)`)
 		var resultat = re.FindStringSubmatch(infosForecast.Vent[0])
 		fmt.Println("Hauteur de houle      : ", infosForecast.HauteurHoule[0], "m")
-		fmt.Println("Force du vent         : ", resultat[1])
+		fmt.Println("Vitesse du vent       : ", resultat[1], "km/h")
 		fmt.Println("Direction du vent     : ", resultat[2])
 	})
 	// En fin de scraping j'affiche le json avec toutes les informations récupérées
