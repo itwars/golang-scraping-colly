@@ -1,4 +1,4 @@
-Différents exemples de web scraping en utilisant le framework Colly (Golang).
+# Différents exemples de web scraping en utilisant le framework Colly (Golang).
 
 ![Colly](/img/colly.jpg)
 
