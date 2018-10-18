@@ -78,15 +78,11 @@ func api(w http.ResponseWriter, r *http.Request) {
 	})
 	// En fin de scraping j'affiche le json avec toutes les informations récupérées
 	c.OnScraped(func(s *colly.Response) {
-		// jsonString, _ := json.Marshal(info)
-		//		fmt.Printf("%s", jsonString)
 		list := &freelance{}
 		for profil, tjm := range info {
 			p := poste{profil, tjm}
 			list.LesPostes = append(list.LesPostes, p)
 		}
-		//		out, _ := json.Marshal(list)
-		//		fmt.Println(string(out))
 		retResponse(w, http.StatusOK, list)
 	})
 	c.Visit("https://www.freelance-info.fr/tarifs/")

@@ -63,7 +63,6 @@ new Vue({
     }
   },
   created() {
-//    const url = 'https://246gg84zg8.execute-api.us-west-2.amazonaws.com/prod/projects';
     const url = 'http://localhost:3000/api'
     this.$http.get(url).then(data => {
       const items = JSON.parse(data.response).postes
