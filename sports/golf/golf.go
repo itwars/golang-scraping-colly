@@ -10,10 +10,10 @@ import (
 )
 
 type leaderboard struct {
-	Rang     string `selector:".td_idalgo_standing_position"`
-	Nom      string `selector:".td_idalgo_standing_country > img" attr:"title"`
-	Pays     string `selector:".td_idalgo_standing_player"`
-	NbPoints string `selector:".td_idalgo_standing_points"`
+	Rang     string `selector:".div_idalgo_sport_standing_position"`
+	Nom      string `selector:".div_idalgo_sport_standing_country > img" attr:"title"`
+	Pays     string `selector:".div_idalgo_sport_standing_name"`
+	NbPoints string `selector:".div_idalgo_sport_standing_total"`
 }
 
 // Leaderboard func récupère les informations de classement
@@ -30,11 +30,13 @@ func Leaderboard() {
 		fmt.Println("Classement mondiale de golf")
 		fmt.Println()
 	})
-	c.OnHTML("tr.tr_idalgo_content_standing_line", func(e *colly.HTMLElement) {
+	c.OnHTML("[data-federation=\"9\"] ul.ul_idalgo_sport_standing > li", func(e *colly.HTMLElement) {
 		classement := &leaderboard{}
 		e.Unmarshal(classement)
 		value, _ := strconv.ParseFloat(classement.NbPoints, 32)
-		fmt.Printf("%2s %-25s %-25s %3.2f point(s)\n", classement.Rang, classement.Nom, classement.Pays, value)
+		if value != 0 {
+			fmt.Printf("%2s %-25s %-25s %3.2f point(s)\n", classement.Rang, classement.Nom, classement.Pays, value)
+		}
 	})
 	// En fin de scraping j'affiche le json avec toutes les informations récupérées
 	c.OnScraped(func(s *colly.Response) {
