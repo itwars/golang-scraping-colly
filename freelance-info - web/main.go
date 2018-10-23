@@ -62,7 +62,7 @@ func api(w http.ResponseWriter, r *http.Request) {
 		colly.AllowedDomains("freelance-info.fr", "www.freelance-info.fr"),
 	)
 	c.OnError(func(_ *colly.Response, err error) {
-		retResponse(w, http.StatusNotFound, map[string]string{"error": "colly"})
+		retResponse(w, http.StatusNotFound, map[string]string{"error": "colly in api func"})
 	})
 	c.OnHTML("li.v1", func(e *colly.HTMLElement) {
 		t, s, err := PrintInfo(e)
