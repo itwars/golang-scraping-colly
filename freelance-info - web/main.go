@@ -60,6 +60,8 @@ func api(w http.ResponseWriter, r *http.Request) {
 	info := map[string]int{}
 	c := colly.NewCollector(
 		colly.AllowedDomains("freelance-info.fr", "www.freelance-info.fr"),
+		colly.IgnoreRobotsTxt(),
+		colly.CacheDir(".colly"),
 	)
 	c.OnError(func(_ *colly.Response, err error) {
 		retResponse(w, http.StatusNotFound, map[string]string{"error": "colly in api func"})
