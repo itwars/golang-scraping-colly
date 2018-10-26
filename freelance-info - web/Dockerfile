@@ -17,5 +17,6 @@ RUN set -x && \
 FROM scratch
 WORKDIR /root/
 COPY --from=0 /go/src/github.com/user/app .
+COPY --from=0 /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 EXPOSE 3000
 CMD ["./app"]
